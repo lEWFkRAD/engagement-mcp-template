@@ -1,0 +1,99 @@
+{
+  "version": "example-1",
+  "engagement": "EXAMPLE-00",
+  "schema": {
+    "classes": {
+      "client": "the client of record for this engagement",
+      "engagement": "the engagement itself: one job, one root folder",
+      "deliverable": "something the engagement produces (filing, report, statement)",
+      "document_slot": "a named place an incoming client document goes",
+      "gate": "a condition that must clear before work runs; reports blockers only",
+      "open_item": "an unresolved question, request, or task with an owner"
+    },
+    "relations": {
+      "owner": "party accountable for the node",
+      "gated_by": "node -> gate ids that must be met first",
+      "depends_on": "node -> node ids that must exist/finish first",
+      "feeds": "document_slot -> deliverable ids the document feeds",
+      "audience": "shared | internal (shared nodes are visible to partner views)"
+    },
+    "rules": [
+      "R-ID every link resolves to an existing id",
+      "R-OWN every open_item has an owner",
+      "R-AUD a shared node may not link to an internal-only node (leak check)",
+      "R-GATE gates are unmet until a human marks them met; gate_check never approves"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "C-01",
+      "cls": "client",
+      "label": "Example Client",
+      "audience": "shared",
+      "note": "placeholder client of record"
+    },
+    {
+      "id": "E-01",
+      "cls": "engagement",
+      "label": "Sample Engagement",
+      "audience": "shared",
+      "owner": "TBD",
+      "note": "placeholder scope for this example job"
+    },
+    {
+      "id": "D-01",
+      "cls": "deliverable",
+      "label": "Sample Deliverable",
+      "audience": "shared",
+      "status": "not_started",
+      "gated_by": ["G-01"]
+    },
+    {
+      "id": "D-02",
+      "cls": "deliverable",
+      "label": "Second Sample Deliverable",
+      "audience": "internal",
+      "status": "not_started",
+      "depends_on": ["D-01"]
+    },
+    {
+      "id": "S-01",
+      "cls": "document_slot",
+      "label": "Slot: sample incoming statement",
+      "audience": "shared",
+      "feeds": ["D-01"]
+    },
+    {
+      "id": "S-02",
+      "cls": "document_slot",
+      "label": "Slot: sample internal worksheet",
+      "audience": "internal",
+      "feeds": ["D-02"]
+    },
+    {
+      "id": "G-01",
+      "cls": "gate",
+      "label": "Sample gate: client permission on file",
+      "status": "unmet",
+      "audience": "shared",
+      "note": "stays unmet until a human sets status=met in the ontology"
+    },
+    {
+      "id": "O-01",
+      "cls": "open_item",
+      "label": "Sample open item: request missing sample document",
+      "owner": "TBD",
+      "status": "open",
+      "severity": "HIGH",
+      "audience": "internal"
+    },
+    {
+      "id": "O-02",
+      "cls": "open_item",
+      "label": "Second sample open item: confirm placeholder scope",
+      "owner": "TBD",
+      "status": "open",
+      "audience": "shared"
+    }
+  ]
+}

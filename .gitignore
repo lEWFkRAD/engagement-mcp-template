@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+plan/intake/ledger.jsonl
+
+plan/ontology/ontology.json
+plan/intake/*.lock
+instances/
