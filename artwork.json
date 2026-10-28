@@ -1,0 +1,8 @@
+{
+  "source": "OpenAI built-in imagegen",
+  "kind": "Concept illustration",
+  "sha256": "df950ba2e469007a4f28c36e1fa871293980ab87adb2a436f958afb00223b4bd",
+  "prompts": [
+    "Use case: ads-marketing.\nAsset type: finished wide 2:1 GitHub/project website hero banner, 2048x1024 if possible, opaque background.\nCreate a distinct premium editorial illustration for \"Engagement MCP Template\": one local engagement folder exposed through a shared structured interface, with audience filtering and human-controlled approval gates. Show a refined cutaway paper archive on a forest-green desk: one cream document folder unfolds into a few connected document slots and typed-node tokens, organized into a shared-facing section and a more private inner compartment. A small brass gate with a review pen beside it represents a gate that requires human approval. Make this a tasteful physical metaphor, not a software screenshot or a complicated flowchart. Carefully crafted paper edges, matte forest-green lacquer, warm ivory pages, restrained brass, subtle print grain, gentle angled daylight. Quiet precision and useful order, strong silhouette, plenty of breathing room.\nTypography integrated in the art: very large, beautifully kerned title exactly \"ENGAGEMENT\" and beneath it \"MCP TEMPLATE\", impeccable spelling and generous edge margins. No subtitle.\nNo other words, client names, sample engagement data, financial figures, approvals claimed as complete, locks implying certified security, fake UI, copied logos, endorsements, watermark, or border. The image communicates an editable blank template rather than a finished client job."
+  ]
+}
