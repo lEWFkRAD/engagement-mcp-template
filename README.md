@@ -1,3 +1,12 @@
+<!-- project-home:start -->
+![Engagement MCP Template concept banner](site/hero.png)
+
+**[Engagement MCP Template project homepage](https://lewfkrad.github.io/engagement-mcp-template/)** · [Documentation](https://github.com/lEWFkRAD/engagement-mcp-template#quickstart)
+
+Expose a local engagement folder through a typed MCP interface with audience filtering and human-controlled gates.
+
+<!-- project-home:end -->
+
 # Engagement MCP Template
 
 A blank, reusable template for the **engagement-MCP pattern**: one engagement,
